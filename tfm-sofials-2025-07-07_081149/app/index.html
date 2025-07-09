@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+
+ 
+  <!-- Entorno realizado por Sofía López para su Trabajo de Fin de Máster de Diseño en la Universidad Complutense de Madrid -->
+ 
+  <head>
+    ...
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+    <script src="https://unpkg.com/aframe-babia-components/dist/aframe-babia-components.min.js"></script>
+    <script src="https://unpkg.com/aframe-environment-component@1.0.0/dist/aframe-environment-component.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.0/dist/aframe-extras.min.js"></script>
+  </head>
+
+  <body>
+    
+    <a-scene 
+      fog="type: exponential; color: #ffffff; density: 0"
+      renderer="colorManagement: true; physicallyCorrectLights: true">
+      
+    
+      
+      <!-- Environment -->
+
+      <a-sky src="https://cdn.glitch.global/6129616c-d685-405f-9e5a-3869316b8be0/entorno_universidad0001.jpg?v=1655202508267" rotation="0 0 0"></a-sky>
+
+      
+      <!-- Light  -->
+        
+      <a-entity light="type: ambient; intensity: 3" color="#ffffff"></a-entity>
+      <a-entity light="type: directional; intensity: 0.8; castShadow: false" position="0 2.5 0"></a-entity>
+
+      
+
+ 
+      
+     
+      <!-- Camera -->
+      <a-entity movement-controls="fly: false" position="1.6 0 0" rotation="0 180 0">
+        <a-entity camera position="0 1.7 0" look-controls></a-entity>
+        <a-entity cursor="rayOrigin:mouse"></a-entity>
+        <a-entity laser-controls="hand: right"></a-entity>
+      </a-entity>
+
+      
+      
+      <!-- Reference sphere-->
+       <a-sphere position="0 0 0" radius="0.2" color="#EF2D5E" visible= "false"></a-sphere>
+      
+               
+
+      
+      
+
+      <!-- ********************************* -->
+         <!--        Assets Enviro       -->        
+      <!-- ********************************* -->
+      
+
+      
+      <!-- Habitacion Sof -->
+            
+      <a-assets>
+        <a-asset-item id="habitacion" src="https://cdn.glitch.me/7c218d4c-8561-4c2d-991a-089b92a49fad/TexturedTFM_32.glb?v=1749748864398"></a-asset-item>
+      </a-assets>
+   
+
+      <a-entity gltf-model="#habitacion" scale="1 1 1" position="0 0 0"></a-entity>
+      
+      
+
+      
+    
+      
+      
+     <!-- ********************************* -->
+       <!--        Pensamientos           -->        
+     <!-- ********************************* -->
+       
+  
+       
+           <!-- Pensamiento espejo -->
+            
+      <a-assets>
+        <a-asset-item id="PensamientoEspejo" src="https://cdn.glitch.global/7c218d4c-8561-4c2d-991a-089b92a49fad/Pensamiento_Espejo_FONDO.glb?v=1749756193797"></a-asset-item>
+      </a-assets>
+   
+
+      <a-entity id="aaa" gltf-model="#PensamientoEspejo" scale="0.25 0.25 0.25" position="-0.07 1.367 -0.269" rotation= "0 0 0"></a-entity>
+      
+      
+      
+      
+      <a-assets>
+        <a-asset-item id="flecha01" src="https://cdn.glitch.global/7c218d4c-8561-4c2d-991a-089b92a49fad/Flecha.glb?v=1749901703075"></a-asset-item>
+      </a-assets>
+   
+
+      <a-entity gltf-model="#flecha01" scale="0.35 0.35 0.35" position="-0.07 1.367 -0.269" rotation= "0 180 0"></a-entity>
+      
+       
+       
+       
+           <!-- Pensamiento diario -->
+            
+      <a-assets>
+        <a-asset-item id="PensamientoDiario" src="https://cdn.glitch.global/7c218d4c-8561-4c2d-991a-089b92a49fad/Pensamiento_Diario_FONDO.glb?v=1750795770182"></a-asset-item>
+      </a-assets>
+   
+
+      <a-entity id="bbb" gltf-model="#PensamientoDiario" scale="0.25 0.25 0.25" position="0.1 1.15 1" rotation= "0 120 0"></a-entity>
+      
+      
+      
+      
+      <a-assets>
+        <a-asset-item id="flecha02" src="https://cdn.glitch.global/7c218d4c-8561-4c2d-991a-089b92a49fad/Flecha.glb?v=1749901703075"></a-asset-item>
+      </a-assets>
+   
+
+      <a-entity gltf-model="#flecha02" scale="0.35 0.35 0.35" position="0.1 1.15 1" rotation= "0 120 0"></a-entity>
+      
+       
+           <!-- Pensamiento armario -->
+            
+      <a-assets>
+        <a-asset-item id="PensamientoArmario" src="https://cdn.glitch.global/7c218d4c-8561-4c2d-991a-089b92a49fad/Pensamiento_Armario_FONDO.glb?v=1750795764866"></a-asset-item>
+      </a-assets>
+   
+
+      <a-entity id="ccc" gltf-model="#PensamientoArmario" scale="0.25 0.25 0.25" position="2 1.45 0.4" rotation= "0 -90 0"></a-entity>
+      
+      
+      
+      
+      <a-assets>
+        <a-asset-item id="flecha03" src="https://cdn.glitch.global/7c218d4c-8561-4c2d-991a-089b92a49fad/Flecha.glb?v=1749901703075"></a-asset-item>
+      </a-assets>
+   
+
+      <a-entity gltf-model="#flecha03" scale="0.35 0.35 0.35" position="2 1.45 0.4" rotation= "0 -90 0"></a-entity>
+      
+       
+       
+          <!-- Pensamiento comida -->
+            
+      <a-assets>
+        <a-asset-item id="PensamientoComida" src="https://cdn.glitch.global/7c218d4c-8561-4c2d-991a-089b92a49fad/Pensamiento_Comida_FONDO.glb?v=1750795768886"></a-asset-item>
+      </a-assets>
+   
+
+      <a-entity id="ddd" gltf-model="#PensamientoComida" scale="0.25 0.25 0.25" position="-1.9 1.1 0.08" rotation= "0 75 0"></a-entity>
+      
+      
+      
+      
+      <a-assets>
+        <a-asset-item id="flecha04" src="https://cdn.glitch.global/7c218d4c-8561-4c2d-991a-089b92a49fad/Flecha.glb?v=1749901703075"></a-asset-item>
+      </a-assets>
+   
+
+      <a-entity gltf-model="#flecha04" scale="0.35 0.35 0.35" position="-1.9 1.1 0.08" rotation= "0 75 0"></a-entity>
+      
+      
+      
+          <!-- Pensamiento ordena -->
+            
+      <a-assets>
+        <a-asset-item id="PensamientoOrdena" src="https://cdn.glitch.global/7c218d4c-8561-4c2d-991a-089b92a49fad/Pensamiento_Ordenador_FONDO.glb?v=1750795777325"></a-asset-item>
+      </a-assets>
+   
+
+      <a-entity id="eee" gltf-model="#PensamientoOrdena" scale="0.25 0.25 0.25" position="-1.95 1.17 0.95" rotation= "0 115 0"></a-entity>
+      
+      
+      
+      
+      <a-assets>
+        <a-asset-item id="flecha05" src="https://cdn.glitch.global/7c218d4c-8561-4c2d-991a-089b92a49fad/Flecha.glb?v=1749901703075"></a-asset-item>
+      </a-assets>
+   
+
+      <a-entity gltf-model="#flecha05" scale="0.35 0.35 0.35" position="-1.95 1.17 0.95" rotation= "0 115 0"></a-entity>
+      
+      
+      
+           <!-- Pensamiento bascula -->
+            
+      <a-assets>
+        <a-asset-item id="PensamientoBascula" src="https://cdn.glitch.global/7c218d4c-8561-4c2d-991a-089b92a49fad/Pensamiento_Bascula_FONDO.glb?v=1750795766144"></a-asset-item>
+      </a-assets>
+   
+
+      <a-entity id="fff" gltf-model="#PensamientoBascula" scale="0.25 0.25 0.25" position="-0.97 1.09 1.8" rotation= "0 180 0"></a-entity>
+      
+      
+      
+      
+      <a-assets>
+        <a-asset-item id="flecha06" src="https://cdn.glitch.global/7c218d4c-8561-4c2d-991a-089b92a49fad/Flecha.glb?v=1749901703075"></a-asset-item>
+      </a-assets>
+   
+
+      <a-entity gltf-model="#flecha06" scale="0.35 0.35 0.35" position="-0.97 1.09 1.8" rotation= "0 180 0"></a-entity>
+      
+     
+       
+           <!-- Pensamiento esterilla yoga -->
+            
+      <a-assets>
+        <a-asset-item id="PensamientoEsterilla" src="https://cdn.glitch.global/7c218d4c-8561-4c2d-991a-089b92a49fad/Pensamiento_Esterilla_FONDO.glb?v=1750795775091"></a-asset-item>
+      </a-assets>
+   
+
+      <a-entity id="ggg" gltf-model="#PensamientoEsterilla" scale="0.25 0.25 0.25" position="1.14 0.95 1.8" rotation= "0 180 0"></a-entity>
+      
+      
+      
+      
+      <a-assets>
+        <a-asset-item id="flecha07" src="https://cdn.glitch.global/7c218d4c-8561-4c2d-991a-089b92a49fad/Flecha.glb?v=1749901703075"></a-asset-item>
+      </a-assets>
+   
+
+      <a-entity gltf-model="#flecha07" scale="0.35 0.35 0.35" position="1.14 0.95 1.8" rotation= "0 180 0"></a-entity>
+      
+     
+      
+      
+         
+      <!-- ********************************* -->
+      <!--        Interactividad       -->        
+      <!-- ********************************* -->
+      
+     
+      
+       
+  <!-- Script para manejar el clic y escalar cada elemento de forma independiente -->
+  <script>
+    AFRAME.registerComponent('scale-on-click', {
+      schema: {
+        scale: {type: 'vec3', default: {x: 6, y: 6, z: 6}}  // Valor de escala por defecto
+      },
+      init: function () {
+        var el = this.el;  // El elemento en el que se aplica el componente
+        el.addEventListener('click', function () {
+          // Cambiar la escala del elemento al hacer clic
+          el.setAttribute('scale', el.getAttribute('scale').x === 0.25 ? {x: 2.5, y: 2.5, z: 1} : {x: 0.25, y: 0.25, z: 0.25});
+        });
+      }
+    });
+
+    // Asignar el componente a cada elemento por separado
+    document.querySelector('#aaa').setAttribute('scale-on-click', '');
+    document.querySelector('#bbb').setAttribute('scale-on-click', '');
+    document.querySelector('#ccc').setAttribute('scale-on-click', '');
+    document.querySelector('#ddd').setAttribute('scale-on-click', '');
+    document.querySelector('#eee').setAttribute('scale-on-click', '');
+    document.querySelector('#fff').setAttribute('scale-on-click', '');
+    document.querySelector('#ggg').setAttribute('scale-on-click', '');
+
+
+  </script>
+      
+      
+
+
+      
+
+    </a-scene>
+  </body>
+
+</html>
